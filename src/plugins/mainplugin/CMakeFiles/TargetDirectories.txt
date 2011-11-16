@@ -1,1 +1,0 @@
-/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/CMakeFiles/mainplugin.dir
