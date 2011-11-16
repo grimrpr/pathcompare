@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+70a654088b9df1772e0c06eb6bfc4fba src/moc_pathcomparemainfactoryplugin.cxx

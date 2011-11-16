@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="Project" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\..\usr\share\;CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\;CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\;CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\Platform\;CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\Compiler\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="mainplugin">
+         <Option output="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/lib/libmainplugin.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin" />
+            <Add directory="/pathcompare/src/interfaces" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 mainplugin" />
+            <CompileFile command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="mainplugin/fast">
+         <Option output="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/lib/libmainplugin.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin" />
+            <Add directory="/pathcompare/src/interfaces" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 mainplugin/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/src/comperatorplugin.cpp">
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/src/pathcomparemainfactoryplugin.cpp">
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/src/pathcomparemainfactoryplugin.h">
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/CMakeSystemSpecificInformation.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/CMakeGenericSystem.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/CMakeCInformation.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/CMakeCXXInformation.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/FindQt4.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/CheckSymbolExists.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/MacroAddFileDependencies.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/FindPackageMessage.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/CMakeParseArguments.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/Qt4ConfigDependentSettings.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/Qt4Macros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/UseQt4.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/Platform/Linux.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\Platform\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/Platform/UnixPaths.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\Platform\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/Platform/Linux-GNU-C.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\Platform\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/Platform/Linux-GNU.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\Platform\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/Platform/Linux-GNU-CXX.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\Platform\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/Platform/Linux-GNU.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\Platform\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/Compiler/GNU-C.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\Compiler\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/Compiler/GNU.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\Compiler\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/Compiler/GNU-CXX.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\Compiler\" />
+      </Unit>
+      <Unit filename="/opt/ros/diamondback/stacks/pathcompare/src/plugins/mainplugin/../../../../../../../../usr/share/cmake-2.8/Modules/Compiler/GNU.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\share\cmake-2.8\Modules\Compiler\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>
