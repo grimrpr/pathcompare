@@ -1,0 +1,9 @@
+.[oa]
+*.cmake
+*.user
+*.cbg
+Makefile
+bin/
+lib/
+*.~
+.gitignore~
