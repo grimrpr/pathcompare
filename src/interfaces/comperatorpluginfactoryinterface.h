@@ -20,7 +20,7 @@ class ComperatorPluginFactoryInterface
 public:
         virtual ~ComperatorPluginFactoryInterface(){}
         //add rosmanager and needed widgets
-        virtual ComperatorPluginPtr createComperatorPlugin(ROSManager * ros_manager) const = 0;
+        virtual ComperatorPluginPtr createComperatorPlugin(ROSManager * ros_manager, QWidget * tab_widget) const = 0;
         virtual QString getPluginName() const = 0;
 };
 

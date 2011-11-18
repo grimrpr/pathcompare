@@ -41,7 +41,7 @@ MainWindow::MainWindow(QWidget *parent) :
             ComperatorPluginFactoryInterface *cpfi = qobject_cast<ComperatorPluginFactoryInterface *>(object);
             if(cpfi){
                     std::cout << cpfi->getPluginName().toLocal8Bit().constData() << std::endl;
-                    ComperatorPluginPtr comp_plugin = cpfi->createComperatorPlugin(&ros_mngr);
+                    ComperatorPluginPtr comp_plugin = cpfi->createComperatorPlugin(&ros_mngr, ui->tab);
                     comp_plugin->testFunction();
             }
             else
