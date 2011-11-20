@@ -4,7 +4,8 @@ ROSManager::ROSManager(QObject *parent) :
         QThread(parent),
         nh(),
         shutdown(false),
-        topic_timer(this)
+        topic_timer(this),
+        topic_cache_map()
 {
         this->start();
 
@@ -81,9 +82,9 @@ std::string ROSManager::strTopicsAndTypes() const
         return out.str();
 }
 
-
+/*
 template <class M>
-boost::shared_ptr<message_filters::Cache<M> > ROSManager::subscribeToTopic(const std::string &topicname, const unsigned int cachesize, const ComperatorPlugin &caller)
+boost::shared_ptr<message_filters::Cache<M> > ROSManager::subscribeToTopic(const std::string &topicname, const unsigned int cachesize, ComperatorPlugin *caller)
 {
 
         //TODO: cachesize needs to be set to max value of all plugins
@@ -105,6 +106,7 @@ boost::shared_ptr<message_filters::Cache<M> > ROSManager::subscribeToTopic(const
                 return boost::static_pointer_cast<message_filters::Cache<M> >(topic_cache_map[topicname].second);
         }
 }
+*/
 
 
 template <class M>
@@ -119,3 +121,4 @@ void ROSManager::run()
                 ros::spin();
         }
 }
+

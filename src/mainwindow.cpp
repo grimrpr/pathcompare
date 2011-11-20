@@ -31,25 +31,53 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(&ros_mngr, SIGNAL(updateModel()), rtm, SLOT(updateTopic()));
 
     //DEBUG / TEST
-    //load Plugin
+    //load Plugins main and camera view
     QDir plugin_dir("/opt/ros/diamondback/stacks/pathcompareplugins/lib");
-    QPluginLoader plugin_loader(plugin_dir.absoluteFilePath("libpluginmain.so"));
-    if(plugin_loader.load())
+    QPluginLoader plugin_loader_main(plugin_dir.absoluteFilePath("libpluginmain.so"));
+    QPluginLoader plugin_loader_camera(plugin_dir.absoluteFilePath("libcameraview.so"));
+
+    if(plugin_loader_main.load())
     {
-            std::cout << "plugin loaded" << std::endl;
-            QObject * object = plugin_loader.instance();
+            QObject * object = plugin_loader_main.instance();
             ComperatorPluginFactoryInterface *cpfi = qobject_cast<ComperatorPluginFactoryInterface *>(object);
             if(cpfi){
-                    std::cout << cpfi->getPluginName().toLocal8Bit().constData() << std::endl;
+
+                    std::cout << "plugin: "
+                              << cpfi->getPluginName().toLocal8Bit().constData()
+                              << "has been loaded "
+                              << std::endl;
+
                     ComperatorPluginPtr comp_plugin = cpfi->createComperatorPlugin(&ros_mngr, ui->tab);
+                    plugin_mngr.addPlugin(comp_plugin);
+                    comp_plugin->testFunction();
+
+            }
+            else
+                qDebug() << "cast to ComperatorPluginFactoryInterface was not possible";
+    }
+    else
+            qDebug() << plugin_loader_main.errorString();
+
+    if(plugin_loader_camera.load())
+    {
+            QObject * object = plugin_loader_camera.instance();
+            ComperatorPluginFactoryInterface *cpfi = qobject_cast<ComperatorPluginFactoryInterface *>(object);
+            if(cpfi){
+
+                    std::cout << "plugin: "
+                              << cpfi->getPluginName().toLocal8Bit().constData()
+                              << "has been loaded "
+                              << std::endl;
+
+                    ComperatorPluginPtr comp_plugin = cpfi->createComperatorPlugin(&ros_mngr, ui->tab_2);
+                    plugin_mngr.addPlugin(comp_plugin);
                     comp_plugin->testFunction();
             }
             else
                 qDebug() << "cast to ComperatorPluginFactoryInterface was not possible";
-
     }
     else
-            qDebug() << plugin_loader.errorString();
+            qDebug() << plugin_loader_camera.errorString();
 
 }
 

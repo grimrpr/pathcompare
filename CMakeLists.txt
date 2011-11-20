@@ -53,6 +53,7 @@ QT4_WRAP_CPP(QT_MOC_HPP ${QT_MOC})
 
 file(GLOB PATHCOMPARE_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} src/*.cpp src/interfaces/*.cpp)
 
+rosbuild_add_library(rosmanager ${QT_MOC_HPP})
 rosbuild_add_executable(pathcompare ${PATHCOMPARE_SOURCES} ${QT_RESOURCES_CPP} ${QT_FORMS_HPP} ${QT_MOC_HPP})
 
 SET(LIBS_LINK pathcompare ${QT_LIBRARIES})

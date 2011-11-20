@@ -11,6 +11,7 @@
 #include "interfaces/rosmanager.h"
 #include "interfaces/comperatorpluginfactoryinterface.h"
 #include "ressourcetreemodel.h"
+#include "pluginmanager.h"
 
 namespace Ui {
     class MainWindow;
@@ -28,6 +29,7 @@ private:
     Ui::MainWindow *ui;
     ROSManager ros_mngr;
     RessourceTreeModel *rtm;
+    PluginManager plugin_mngr;
 
 };
 

@@ -29,6 +29,7 @@
 //project includes
 #include "comperatorplugin.h"
 
+
 /**
   This class handles all ROS specific tasks like initialization and receiving messages from topics.
   In this context each ComperatorPlugin should use ROSManager members to obtain access to desired topics.
@@ -75,7 +76,28 @@ public:
           @return returns a Pointer to a message_filter::cache after successful subscription otherwise null
           */
         template <class M>
-        boost::shared_ptr<message_filters::Cache<M> > subscribeToTopic(const std::string &topicname, const unsigned int cachesize, const ComperatorPlugin &caller);
+        boost::shared_ptr<message_filters::Cache<M> > subscribeToTopic(const std::string &topicname, const unsigned int cachesize, ComperatorPlugin *caller)
+        {
+
+                //TODO: cachesize needs to be set to max value of all plugins
+                //topic already subscribed?
+                if(!topic_cache_map.count(topicname))
+                {
+                        //go here if not subscribed yet
+
+                        boost::shared_ptr<message_filters::Subscriber<M> > sub ( new message_filters::Subscriber<M> (nh, topicname, 1));
+
+                        //need to strip type information to hold the reference
+                        boost::shared_ptr<void> cache(new message_filters::Cache<M>(*sub, cachesize));
+                        topic_cache_map[topicname] = std::make_pair(boost::static_pointer_cast<void>(sub), cache);
+                        return boost::static_pointer_cast<message_filters::Cache<M> >(cache);
+                }
+
+                else
+                {
+                        return boost::static_pointer_cast<message_filters::Cache<M> >(topic_cache_map[topicname].second);
+                }
+        }
 
         /**
           Unsubscribes from a topic.
@@ -121,4 +143,4 @@ private:
 
 };
 
-#endif // ROSMANAGER_H
+#endif //ROSMANAGER_H

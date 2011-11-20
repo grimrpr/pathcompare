@@ -2,8 +2,10 @@
 *.cmake
 *.user
 *.cbg
+*.so
 Makefile
 bin/
 lib/
-*.~
+*.*~
 .gitignore~
+qtcreator-build/
