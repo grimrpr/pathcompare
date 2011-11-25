@@ -15,14 +15,15 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    /*
     //DEBUG / TEST:
     QStringList slist = ros_mngr.getTopicNamesOfType("rosgraph_msgs/Log");
     std::cout << slist.at(0).toLocal8Bit().constData() << std::endl;
 
     //DEBUG / TEST:
     std::cout << ros_mngr.strTopicsAndTypes() << std::endl;
+    */
 
-    //DEBUG / TEST
     rtm = new RessourceTreeModel(&ros_mngr, this);
     ui->ResourceView->setModel(rtm);
     ui->ResourceView->show();
@@ -30,6 +31,11 @@ MainWindow::MainWindow(QWidget *parent) :
     //connect ROSManager with RessourceTreeModel objects
     connect(&ros_mngr, SIGNAL(updateModel()), rtm, SLOT(updateTopic()));
 
+    QDir plugin_dir("/opt/ros/diamondback/stacks/pathcompareplugins/lib");
+    plugin_mngr = new PluginManager(plugin_dir, ui->PluginTabs, &ros_mngr);
+    connect(&ros_mngr, SIGNAL(updateModel()), plugin_mngr, SLOT(updatePlugins()));
+
+    /*
     //DEBUG / TEST
     //load Plugins main and camera view
     QDir plugin_dir("/opt/ros/diamondback/stacks/pathcompareplugins/lib");
@@ -48,7 +54,6 @@ MainWindow::MainWindow(QWidget *parent) :
                               << std::endl;
 
                     ComperatorPluginPtr comp_plugin = cpfi->createComperatorPlugin(&ros_mngr, ui->tab);
-                    plugin_mngr.addPlugin(comp_plugin);
                     comp_plugin->testFunction();
 
             }
@@ -78,6 +83,7 @@ MainWindow::MainWindow(QWidget *parent) :
     }
     else
             qDebug() << plugin_loader_camera.errorString();
+            */
 
 }
 

@@ -28,8 +28,8 @@ public:
 private:
     Ui::MainWindow *ui;
     ROSManager ros_mngr;
+    PluginManager *plugin_mngr;
     RessourceTreeModel *rtm;
-    PluginManager plugin_mngr;
 
 };
 

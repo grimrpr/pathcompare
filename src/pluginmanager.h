@@ -3,6 +3,7 @@
 
 //Qt includes
 #include <QObject>
+#include <QWidget>
 #include <QList>
 #include <QDir>
 #include <QTabWidget>
@@ -11,6 +12,7 @@
 //project includes
 #include "interfaces/comperatorplugin.h"
 #include "interfaces/comperatorpluginfactoryinterface.h"
+#include "interfaces/rosmanager.h"
 
 class PluginManager : public QObject
 {
@@ -19,9 +21,10 @@ class PluginManager : public QObject
         QList<QString> plugin_names_list;
         QDir plugin_dir;
         QTabWidget *tab_widget;
+        ROSManager *ros_mngr;
 
 public:
-        explicit PluginManager(const QDir &searchdir, QTabWidget * tw, QObject *parent = 0);
+        explicit PluginManager(const QDir &searchdir, QTabWidget * tw, ROSManager *ros_manager, QObject *parent = 0);
         void addPlugin(const ComperatorPluginPtr &comparator);
 
 Q_SIGNALS:
