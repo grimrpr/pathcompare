@@ -20,6 +20,9 @@ make
 
 
 Starten von Pathcompare
+1.) starte ROS master
+roscore
 
+2.) öffne terminal fenster starte pathcompare
 rosrun pathcompare pathcompare
 
